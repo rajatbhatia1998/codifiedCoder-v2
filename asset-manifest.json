@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/rajatbhatia1998/codifiedCoder-v2.git/static/css/main.7c61ed90.css",
+    "main.js": "/rajatbhatia1998/codifiedCoder-v2.git/static/js/main.2dbad108.js",
+    "static/js/787.4fe40303.chunk.js": "/rajatbhatia1998/codifiedCoder-v2.git/static/js/787.4fe40303.chunk.js",
+    "index.html": "/rajatbhatia1998/codifiedCoder-v2.git/index.html",
+    "main.7c61ed90.css.map": "/rajatbhatia1998/codifiedCoder-v2.git/static/css/main.7c61ed90.css.map",
+    "main.2dbad108.js.map": "/rajatbhatia1998/codifiedCoder-v2.git/static/js/main.2dbad108.js.map",
+    "787.4fe40303.chunk.js.map": "/rajatbhatia1998/codifiedCoder-v2.git/static/js/787.4fe40303.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7c61ed90.css",
+    "static/js/main.2dbad108.js"
+  ]
+}
