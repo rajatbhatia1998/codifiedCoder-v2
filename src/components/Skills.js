@@ -1,7 +1,7 @@
 import React from 'react'
 import {Parallax,useParallax,ParallaxBanner} from 'react-scroll-parallax'
 import Fade from 'react-reveal/Fade';
-import { DiReact } from "react-icons/di";
+import { DiReact,DiMongodb,DiAndroid,DiNodejs,DiApple } from "react-icons/di";
 
 const dummyData = [
     {
@@ -22,14 +22,17 @@ const dummyData = [
 
 
 const getExperience = ()=>{
-    let startData = ""
-    return 3
+  var startDate = new Date(2019,7,1);
+  var nowDate = new Date();
+  var diff = nowDate.getTime() - startDate.getTime(); 
+ 
+  return (diff / 31536000000).toFixed(1); 
   }
 export default function Skills() {
   return (
     
     
-      <div className='bg-blue-700 mt-10' style={{width:'100%',height:'500px'}}  >
+      <div className='bg-blue-700 mt-10' style={{width:'100%',height:'auto',paddingBottom:'50px'}}  >
         
                
 
@@ -44,7 +47,33 @@ export default function Skills() {
                     <span className='text-white  text-lg sm:text-sm'>Full Stack MERN Developer with experience of {getExperience()}+ years</span>
                   </div>
         
-        
+                  <div id="skills" className='mt-10 flex flex-row justify-around sm:justify-between'>
+
+                  <div>
+                  <span className='flex flex-col justify-center items-center'>
+                  <DiMongodb color='white' size={30}/>
+                  <span className='text-white text-lg sm:text-2xl'>Mongo</span>
+                  </span>
+
+                  <span className='flex flex-col justify-center items-center mt-5'>
+                  <DiReact color='white' size={30}/>
+                  <span className='text-white text-lg sm:text-2xl'>React</span>
+                  </span>
+                  </div>     
+
+
+                  <div>
+                  <span className='flex flex-col justify-center items-center'>
+                  <DiNodejs color='white' size={30}/>
+                  <span className='text-white text-lg sm:text-2xl'>Node</span>
+                  </span>
+
+                  <span className='flex flex-col justify-center items-center mt-5'>
+                  <span className='flex flex-row'><DiAndroid color='white' size={30}/><DiApple color='white' size={30}/></span>
+                  <span className='text-white text-lg sm:text-2xl'>React native</span>
+                  </span>
+                  </div>  
+                  </div>
                   
                   </div>
                   </Fade>
@@ -55,7 +84,7 @@ export default function Skills() {
 
 
                   <Fade right>
-                        <div id="right-info" className="flex flex-col justify-center px-5 ">
+                        <div id="right-info" className="flex flex-col justify-center  px-5 ">
                    
                         <span className='text-gray-100 font-bold text-2xl sm:text-3xl sm:block hidden'>Experience</span>
                    
@@ -65,11 +94,11 @@ export default function Skills() {
                                 return <div>
                                 
                                 <hr className='py-3'></hr>
-                                <div className='flex flex-row py-2 sm:py-2'>
+                                <div className='flex flex-row py-2 sm:py-2 px-2'>
                                         
-                                        <span  className='text-white text-lg sm:text-l'>{exp.from} - {exp.when}</span>
+                                        <span  className='text-white text-l sm:text-l'>{exp.from} - {exp.when}</span>
                                         <span className='flex flex-col px-5'>
-                                            <span  className='text-white font-bold text-lg sm:text-2xl'>{exp.role}</span>
+                                            <span  className='text-white font-bold text-l sm:text-2xl'>{exp.role}</span>
                                             <span className='text-gray-300 font-bold pt-2 text-lg sm:text-xl' >{exp.client}</span>
                                         </span>
                                   </div>

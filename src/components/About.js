@@ -10,8 +10,11 @@ export default function About() {
 
  
   const getExperience = ()=>{
-    let startData = ""
-    return 3
+    var startDate = new Date(2019,7,1);
+    var nowDate = new Date();
+    var diff = nowDate.getTime() - startDate.getTime(); 
+   
+    return (diff / 31536000000).toFixed(1);    
   }
 
   return (
@@ -22,7 +25,7 @@ export default function About() {
       <div id="profile-info" className='py-1 px-1 flex-1 flex align-middle justify-between sm:justify-around sm:align-middle flex-col sm:flex-row'>
       
     
-        <Parallax id="left-info" className="flex flex-col justify-center sm:ml-0 ml-10" easing={'easeInOut'} speed={-10}>
+        <Parallax id="left-info" className="flex flex-col justify-center sm:mt-0 mt-10 sm:ml-0 ml-10" easing={'easeInOut'} speed={1}>
         <LightSpeed left>
           <span className='text-black-700 font-bold text-2xl sm:text-6xl'>I am Full Stack</span>
           <span className='text-black-700 font-bold text-2xl text-blue-700 sm:text-6xl'>Developer</span>
@@ -39,7 +42,7 @@ export default function About() {
          
      
  
-          <Parallax easing={'easeInOut'}  speed={20}>
+          <Parallax easing={'easeInOut'}  speed={-10}>
           <div id="right-info flex flex-row  sm:mt-0 ml-20">
           <Flip right>
             <img loading='lazy' src="images/about_banner.PNG"  className=' drop-shadow-2xl flex-2 object-contain' width={500} height={500}/>
