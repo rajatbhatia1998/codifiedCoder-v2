@@ -6,16 +6,10 @@ import Flip from 'react-reveal/Flip';
 
 
 
-export default function About() {
+export default function About(props) {
 
  
-  const getExperience = ()=>{
-    var startDate = new Date(2019,7,1);
-    var nowDate = new Date();
-    var diff = nowDate.getTime() - startDate.getTime(); 
-   
-    return (diff / 31536000000).toFixed(1);    
-  }
+  
 
   return (
     <div className='container py-1 pb-20'>
@@ -29,7 +23,7 @@ export default function About() {
         <LightSpeed left>
           <span className='text-black-700 font-bold text-2xl sm:text-6xl'>I am Full Stack</span>
           <span className='text-black-700 font-bold text-2xl text-blue-700 sm:text-6xl'>Developer</span>
-          <span className='text-gray-700 font-bold text-sm pt-5 sm:text-l'>Hi, I am Rajat Bhatia . I have Experience of {getExperience()}+ years</span>
+          <span className='text-gray-700 font-bold text-sm pt-5 sm:text-l'>Hi, I am Rajat Bhatia . I have Experience of {props.totalExp}+ years</span>
 
 
           <div className='pt-5 flex flex-row'>

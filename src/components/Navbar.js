@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 
 export default function Navbar() {
-    const [toggleMenu, setToggleMenu] = useState(false)
+    const [toggleMenu, setToggleMenu] = useState(true)
  
   const toggleMobileMenu = (show) => {
     const menu = document.getElementById("menuBarMobile")
@@ -18,7 +18,7 @@ export default function Navbar() {
     <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
     <div class="container flex flex-wrap justify-between items-center mx-auto">
       <a href="/" class="flex items-center">
-        <img src="" class="mr-3 h-6 sm:h-9" alt="Codified Coder" />
+        <img src="images/logoMain.png" class="mr-3 h-12 sm:h-30" alt="Codified Coder" />
 
       </a>
       <div class="flex md:order-2">

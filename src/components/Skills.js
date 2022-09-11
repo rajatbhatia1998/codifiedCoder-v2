@@ -1,34 +1,29 @@
-import React from 'react'
+import React,{useEffect,useState} from 'react'
 import {Parallax,useParallax,ParallaxBanner} from 'react-scroll-parallax'
 import Fade from 'react-reveal/Fade';
 import { DiReact,DiMongodb,DiAndroid,DiNodejs,DiApple } from "react-icons/di";
-
-const dummyData = [
-    {
-        client:"TCS",
-        role:"Full Stack Developer",
-        from:"21/7/2019",
-        when:"Present",
-
-    },
-    {
-        client:"TCS",
-        role:"React Native Developer",
-        from:"1/3/2020",
-        when:"Present",
-
-    }
-]
+import {getExperienceList} from '../firebase'
 
 
-const getExperience = ()=>{
-  var startDate = new Date(2019,7,1);
-  var nowDate = new Date();
-  var diff = nowDate.getTime() - startDate.getTime(); 
- 
-  return (diff / 31536000000).toFixed(1); 
-  }
-export default function Skills() {
+
+
+
+
+
+
+
+
+export default function Skills(props) {
+
+  const [expList,setExpList] = useState([])
+
+  useEffect(()=>{
+    const expList = getExperienceList()
+    expList.then(list=>{
+      
+      setExpList(list)
+    })
+  },[])
   return (
     
     
@@ -44,7 +39,7 @@ export default function Skills() {
                   <span className='text-white font-bold text-2xl sm:text-6xl'>Experience</span>
                  
                   <div id="experience-info" className='pt-5'>
-                    <span className='text-white  text-lg sm:text-sm'>Full Stack MERN Developer with experience of {getExperience()}+ years</span>
+                    <span className='text-white  text-lg sm:text-sm'>Full Stack MERN Developer with experience of {props.totalExp}+ years</span>
                   </div>
         
                   <div id="skills" className='mt-10 flex flex-row justify-around sm:justify-between'>
@@ -89,12 +84,12 @@ export default function Skills() {
                         <span className='text-gray-100 font-bold text-2xl sm:text-3xl sm:block hidden'>Experience</span>
                    
                         <div id='exp-list' className='mt-10'>
-                            {dummyData.map(exp=>{
+                            {expList.length > 0 && expList.map(exp=>{
 
                                 return <div>
                                 
                                 <hr className='py-3'></hr>
-                                <div className='flex flex-row py-2 sm:py-2 px-2'>
+                                <div className='flex flex-row py-2 sm:py-2 sm:ml-0 px-2' style={{marginLeft:40}}>
                                         
                                         <span  className='text-white text-l sm:text-l'>{exp.from} - {exp.when}</span>
                                         <span className='flex flex-col px-5'>
