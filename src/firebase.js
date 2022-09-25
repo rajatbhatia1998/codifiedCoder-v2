@@ -34,4 +34,10 @@ const getSiteData = async ()=>{
     return siteData;
 }
 
-export {getExperienceList,getSiteData}
+const getProjects = async ()=>{
+  const projectCol = collection(db, 'projects');
+  const projectSnapshot = await getDocs(projectCol);
+  const projectData = projectSnapshot.docs.map(doc => {return {data:doc.data(),type:doc.id}});
+  return projectData;
+}
+export {getExperienceList,getSiteData, getProjects}
