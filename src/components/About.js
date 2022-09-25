@@ -36,7 +36,7 @@ export default function About(props) {
          
      
  
-          <Parallax easing={'easeInOut'}  speed={-10}>
+          <Parallax easing={'easeInOut'}  speed={6}>
           <div id="right-info flex flex-row  sm:mt-0 ml-20">
           <Flip right>
             <img loading='lazy' src="images/about_banner.PNG"  className=' drop-shadow-2xl flex-2 object-contain' width={500} height={500}/>

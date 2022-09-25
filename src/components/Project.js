@@ -41,6 +41,7 @@ export default function Project() {
                     <figure>
                         <div>
                             <img src={project.data.imageUrl} 
+                            loading='lazy'
                              style={{cursor: "pointer"}}
                             onClick={()=>{window.open(project.data.link,"_blank")}}
                             />
