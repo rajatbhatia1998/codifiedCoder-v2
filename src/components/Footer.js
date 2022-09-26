@@ -20,7 +20,7 @@ export default function Footer() {
                 <h2 class="mb-6 text-sm font-semibold text-white uppercase dark:text-white">get in touch</h2>
                 <ul class="text-white dark:text-white">
                     <li class="mb-4">
-                        <a href="https://linkedin.com/in/rajat-bhatia-9684ba188" class="hover:underline">Linkdin</a>
+                        <a href="https://linkedin.com/in/rajat-bhatia-9684ba188" class="hover:underline">Linkedin</a>
                     </li>
                     <li>
                         <a href="https://tailwindcss.com/" class="hover:underline">Email</a>
