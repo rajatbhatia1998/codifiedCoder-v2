@@ -3,6 +3,7 @@ import About from './About'
 import Navbar from './Navbar'
 import Skills from './Skills'
 import Project from './Project'
+import Footer from './Footer'
 import {getSiteData} from '../firebase'
 import './custom/loader.css'
 
@@ -46,6 +47,7 @@ export default function Main() {
         <About totalExp={totalExp}/>
         <Skills totalExp={totalExp}/>
         <Project totalExp={totalExp}/>
+        <Footer/>
     </div>
     }
     </>

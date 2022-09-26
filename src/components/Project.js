@@ -23,13 +23,14 @@ export default function Project() {
 
 
   return (
-    <div className='mt-1' style={{width:'100%',height:'auto',paddingBottom:'50px'}}  >
+    <div className='flex  flex-col justify-between item-middle    sm:items-start  sm:justify-around  sm:flex-row' style={{width:'100%',height:'auto',paddingBottom:'50px'}}  >
 
-
+<span className=' mt-5 text-black-700 ml-5 font-bold text-2xl text-blue-700 sm:text-6xl'>Projects</span>
 
      <Fade left>   
     <section>
     <div class="container">
+    
         <div class="carousel">
             
             {projects.map(project=>{
