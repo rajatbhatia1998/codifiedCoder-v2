@@ -4,7 +4,8 @@ export default function Navbar() {
     const [toggleMenu, setToggleMenu] = useState(true)
  
     const scrollTo = (section)=>{
-      console.log("sction",section)
+      
+      const menu = document.getElementById("menuBarMobile")
       if(section==='Skills'){
         window.scrollTo({
           top: 800,
@@ -20,6 +21,8 @@ export default function Navbar() {
           });
         
       }
+      menu.classList.add('hidden')
+      setToggleMenu(true)
     }
   const toggleMobileMenu = (show) => {
     const menu = document.getElementById("menuBarMobile")

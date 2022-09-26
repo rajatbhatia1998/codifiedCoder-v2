@@ -5,12 +5,17 @@ import Skills from './Skills'
 import Project from './Project'
 import Footer from './Footer'
 import {getSiteData} from '../firebase'
+import Chatbot from 'react-chatbot-kit'
+import ActionProvider from './ChatBot/ActionProvider.js';
+import MessageParser from './ChatBot/MessageParser.js';
+import config from './ChatBot/config.js';
 import './custom/loader.css'
-
+import { SiChatbot } from "react-icons/si";
 export default function Main() {
 
   const [totalExp,setTotalExp] = useState(0)
   const [isLoading , setLoading] = useState(true)
+  const [showChatbot,setShowChatBot]  = useState(false)
   useEffect(()=>{
    
     getSiteData().then(data=>{
@@ -48,6 +53,16 @@ export default function Main() {
         <Skills totalExp={totalExp}/>
         <Project totalExp={totalExp}/>
         <Footer/>
+        {
+        showChatbot  && <div  id="chatbotWrapper">
+            <Chatbot config={config} actionProvider={ActionProvider} 	    messageParser={MessageParser} />
+        </div>
+}
+        <span onClick={()=>{setShowChatBot(!showChatbot)}}
+        className='cursor-pointer'
+          id="chatbotIcon">
+            <SiChatbot/>
+            </span>
     </div>
     }
     </>

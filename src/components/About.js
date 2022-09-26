@@ -28,7 +28,7 @@ export default function About(props) {
 
           <div className='pt-5 flex flex-row'>
           <button className="text-white px-2 py-2 text-sm font-bold bg-blue-700 rounded-lg  sm:px-4 sm:py-3 hover:text-white hover:bg-black">Let's Talk</button>
-          <button className="ml-2 text-black border-solid border-blue-700 border-2 px-2 py-2 text-sm font-bold bg-white rounded-lg sm:px-4 sm:py-3 hover:text-white hover:bg-blue-700">Portfolio</button>
+          <button className="ml-2 text-black border-solid border-blue-700 border-2 px-2 py-2 text-sm font-bold bg-white rounded-lg sm:px-4 sm:py-3 hover:text-white hover:bg-blue-700">Get Resume</button>
         </div>
         </LightSpeed>
           </Parallax>
