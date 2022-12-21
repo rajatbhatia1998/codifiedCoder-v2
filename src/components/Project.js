@@ -23,10 +23,10 @@ export default function Project() {
 
 
   return (
-    <div className='flex  flex-col justify-between item-middle    sm:items-start  sm:justify-around  sm:flex-row' style={{width:'100%',height:'auto',paddingBottom:'50px'}}  >
+    <div className='flex  flex-col justify-between item-middle    sm:items-middle  sm:justify-around  sm:flex-col' style={{width:'100%',height:'auto',paddingBottom:'50px'}}  >
 
-<span className=' mt-5 text-black-700 ml-5 font-bold text-2xl text-blue-700 sm:text-6xl'>Projects</span>
-
+<span className='mb-5 text-center mt-5 text-black-700 ml-5 font-bold text-3xl text-blue-700 sm:text-6xl'>Projects</span>
+{/* 
      <Fade left>   
     <section>
     <div class="container">
@@ -68,7 +68,46 @@ export default function Project() {
             </ul>
         </div>
     </div>
-</section></Fade>
+</section></Fade> */}
+
+{  projects.map(project=>{
+   
+
+        return  <div style={{
+            display:"flex",
+            flexDirection:"row",
+            justifyContent:"space-around",
+            alignItems:"center",
+            marginBottom:20,
+            flexWrap:"wrap",
+            padding:10,
+        
+        }}>
+                <img src={project.data.imageUrl} 
+                            loading='lazy'
+                             style={{cursor: "pointer",width:"500px",height:"300px"}}
+                           
+                            />
+                            <div style={{
+                            display:"flex",
+                            flexDirection:"column",
+                            alignItems:"center",
+                            justifyContent:"space-evenly",
+                            flexWrap:"wrap",
+                            textAlign:"center"
+                            }}>
+                                  <span className='font-bold mt-3' >{project.data.projectName}</span>
+                                <span style={{width:"90%"}} >Description: {project.data.description}</span>
+                                <button
+                                 onClick={()=>{window.open(project.data.link,"_blank")}}
+                                style={{width:"100px"}} className="ml-2 mt-2  text-black border-solid border-blue-700 border-2 px-2 py-2 text-sm font-bold bg-white rounded-lg sm:px-4 sm:py-3 hover:text-white hover:bg-blue-700">VISIT</button>
+                              
+                            </div>
+        </div>
+
+
+})}
+
     </div>
   )
 }
