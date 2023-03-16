@@ -11,6 +11,12 @@ import MessageParser from './ChatBot/MessageParser.js';
 import config from './ChatBot/config.js';
 import './custom/loader.css'
 import { SiChatbot } from "react-icons/si";
+import { Canvas } from '@react-three/fiber'
+import CustomBall from './custom/CustomBall'
+
+
+
+
 export default function Main() {
 
   const [totalExp,setTotalExp] = useState(0)
@@ -33,17 +39,20 @@ export default function Main() {
     var diff = nowDate.getTime() - startDate.getTime(); 
     const exp =  (diff / 31536000000).toFixed(1); 
     setTotalExp(exp)
-    setLoading(false)
+    setLoading(true)
     }
   return (
     <>
     {isLoading ?
 
-      <div className='container flex justify-center items-center' style={{height:'500px'}}>
+      // <div className='container flex justify-center items-center' style={{height:'500px'}}>
       
-      <div class="lds-circle"><div></div></div>
+      // <div class="lds-circle"><div></div></div>
       
-      </div>
+      // </div>
+      <Canvas shadows id="loader-canvas" >
+              <CustomBall/>
+      </Canvas>
    
    :
     <div>
