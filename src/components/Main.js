@@ -39,7 +39,7 @@ export default function Main() {
     var diff = nowDate.getTime() - startDate.getTime(); 
     const exp =  (diff / 31536000000).toFixed(1); 
     setTotalExp(exp)
-    setLoading(true)
+    setLoading(false)
     }
   return (
     <>
