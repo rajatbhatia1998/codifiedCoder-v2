@@ -8,7 +8,7 @@ import {Canvas} from '@react-three/fiber'
 import CustomBall from './custom/CustomBall'
 import { AnimatedSphere } from './custom/AnimatedSphere';
 import { OrbitControls } from '@react-three/drei';
-
+import ComputersCanvas from './custom/Computers';
 
 export default function About(props) {
 

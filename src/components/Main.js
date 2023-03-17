@@ -13,6 +13,7 @@ import './custom/loader.css'
 import { SiChatbot } from "react-icons/si";
 import { Canvas } from '@react-three/fiber'
 import CustomBall from './custom/CustomBall'
+import ComputersCanvas from './custom/Computers'
 
 
 
@@ -62,7 +63,12 @@ export default function Main() {
    
         <Navbar/>
         <About totalExp={totalExp}/>
+       
+        
         <Skills totalExp={totalExp}/>
+        <div className='sm:w-full sm:h-[500px] h-[300px] w-full p-5'>
+          <ComputersCanvas/>
+        </div>
         <Project totalExp={totalExp}/>
         <Footer/>
         {
