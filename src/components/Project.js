@@ -40,7 +40,7 @@ export default function Component() {
                 <CardTitle className="text-2xl font-bold mb-2">{project.data.projectName}</CardTitle>
                 <p className="text-muted-foreground">{project.data.description}</p>
               </CardContent>
-              <CardFooter className="p-6 pt-0">
+              <CardFooter className="p-6 pt-0 flex justify-center">
               <button
                                  onClick={()=>{window.open(project.data.link,"_blank")}}
                                 style={{width:"100px"}} className="ml-2 mt-2  text-black border-solid border-blue-700 border-2 px-2 py-2 text-sm font-bold bg-white rounded-lg sm:px-4 sm:py-3 hover:text-white hover:bg-blue-700">VISIT</button>
